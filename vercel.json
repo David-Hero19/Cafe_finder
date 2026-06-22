@@ -2,22 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/*.py",
+      "src": "cafes.py",
       "use": "@vercel/python"
-    },
-    {
-      "src": "public/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1.py"
+      "src": "/api/cafes",
+      "dest": "/cafes.py"
     },
     {
       "src": "/(.*)",
-      "dest": "/public/$1"
+      "dest": "/$1"
     }
   ]
 }

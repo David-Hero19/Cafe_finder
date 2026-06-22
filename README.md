@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # WorkBrew — Remote Cafe Finder
 
 A beautifully designed cafe finder for remote workers, with a Python serverless API backend hosted on Vercel.
@@ -103,3 +104,7 @@ vercel dev
 ```
 
 This spins up a local dev server at `http://localhost:3000` that mirrors the production Vercel environment exactly.
+=======
+# Cafe_finder
+Remote cafe finder for digital nomads and work-from-anywhere folks. Filter by WiFi speed, noise level, and outlets. Built with HTML/CSS/JS + Python serverless API, deployable on Vercel.
+>>>>>>> 225c76f62dda19d8b5082e1b69b44ffe41a74005
