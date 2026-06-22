@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WorkBrew — Remote Cafe Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <nav class="nav">
+      <span class="logo">WorkBrew</span>
+      <span class="tagline">Find your seat. Do your work.</span>
+    </nav>
+    <div class="hero-text" id="heroText">
+      <p class="hero-eyebrow">Remote work deserves better than bad WiFi.</p>
+      <h1>Cafes that <em>actually</em> work.</h1>
+    </div>
+    <div class="scroll-hint">↓</div>
+  </header>
+
+  <section class="filter-bar" id="filterBar">
+    <div class="filter-inner">
+      <div class="filter-group">
+        <label>City</label>
+        <select id="cityFilter">
+          <option value="">All Cities</option>
+          <option value="New York">New York</option>
+          <option value="San Francisco">San Francisco</option>
+          <option value="Austin">Austin</option>
+          <option value="London">London</option>
+          <option value="Berlin">Berlin</option>
+          <option value="Tokyo">Tokyo</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>WiFi</label>
+        <select id="wifiFilter">
+          <option value="">Any</option>
+          <option value="4">Fast (4+)</option>
+          <option value="5">Blazing (5)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Noise</label>
+        <select id="noiseFilter">
+          <option value="">Any</option>
+          <option value="quiet">Quiet</option>
+          <option value="moderate">Moderate</option>
+          <option value="buzzy">Buzzy</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Outlets</label>
+        <select id="outletFilter">
+          <option value="">Any</option>
+          <option value="4">Plenty (4+)</option>
+          <option value="5">Everywhere (5)</option>
+        </select>
+      </div>
+      <button class="filter-btn" id="searchBtn">Search</button>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <main class="main" id="main">
+    <div class="results-header">
+      <span id="resultCount">Loading cafes…</span>
+      <div class="sort-group">
+        <label>Sort by</label>
+        <select id="sortBy">
+          <option value="score">Best Overall</option>
+          <option value="wifi">WiFi Speed</option>
+          <option value="quiet">Quietest</option>
+          <option value="outlets">Most Outlets</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card-grid" id="cardGrid">
+      <!-- Cards injected by JS -->
+    </div>
+  </main>
+
+  <!-- Detail Modal -->
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>WorkBrew — Built for the plugged-in & caffeinated.</p>
+    <p class="footer-sub">Data sourced from community submissions. Cafes change — verify before you go.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
